@@ -1,21 +1,21 @@
-﻿namespace StokTakipSistemi // Form1.cs'deki namespace ile aynı olmalı
+﻿namespace StokTakipSistemi
 {
-    partial class Form1 // 'partial class Form1' olmalı
+    partial class Form1
     {
         /// <summary>
-        /// Required designer variable.
+        ///  Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Clean up any resources being used.
+        ///  Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing) // Bu satır doğru olmalı (önceki parantez hatasını düzelttik)
+        protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
             {
-                components.Dispose(); // Bu satırda 'object' hatası vardı, düzelmeli
+                components.Dispose();
             }
             base.Dispose(disposing);
         }
@@ -23,15 +23,15 @@
         #region Windows Form Designer generated code
 
         /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
+        ///  Required method for Designer support - do not modify
+        ///  the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container(); // Bu satırda hata yoktu
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font; // Bu satırda hata vardı, düzelmeli
-            this.ClientSize = new System.Drawing.Size(800, 450); // Bu satırda hata vardı, düzelmeli
-            this.Text = "Form1"; // Bu satırda hata vardı, düzelmeli
+            this.components = new System.ComponentModel.Container();
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(900, 600);
+            this.Text = "Stok Takip Sistemi";
         }
 
         #endregion

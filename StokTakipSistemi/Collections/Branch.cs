@@ -4,11 +4,12 @@ using System.Collections.Generic;
 
 namespace StokTakipSistemi
 {
-        public class Branch
-    {
-        [BsonId]
-        [BsonRepresentation(BsonType.ObjectId)]
-        public string Id { get; set; } = ObjectId.GenerateNewId().ToString();
-        public string Name { get; set; } = string.Empty;
-    }
+       public class Branch
+{
+    public int Id { get; set; } // SQLite otomatik artan sayı yapar
+    public string Name { get; set; }
+    
+    // Bir şubenin birden fazla ürünü olabilir
+    public List<Product> Products { get; set; } = new List<Product>();
+}
 }

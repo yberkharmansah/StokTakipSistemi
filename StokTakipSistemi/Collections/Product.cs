@@ -12,17 +12,13 @@ namespace StokTakipSistemi
 
 public class Product
 {
-    [BsonId]
-    [BsonRepresentation(BsonType.ObjectId)]
-    public string Id { get; set; } = ObjectId.GenerateNewId().ToString();
-
-    [BsonElement("productName")]
-    public string ProductName { get; set; } = string.Empty;
-
-    [BsonElement("barcode")]
-    public string Barcode { get; set; } = string.Empty;
-
-    [BsonElement("branchStocks")]
-    public List<BranchStock> BranchStocks { get; set; } = new List<BranchStock>();
+    public int Id { get; set; }
+    public string ProductName { get; set; } // Name yerine ProductName yaptık
+    public string Barcode { get; set; }      // Barcode ekledik
+    public int Quantity { get; set; }
+    public decimal Price { get; set; }
+    
+    public int BranchId { get; set; }
+    public Branch Branch { get; set; }
 }
 }
